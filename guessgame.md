@@ -1,12 +1,13 @@
+import stramlit as st
 import random
 
 def guessing_game():
     number_to_guess = random.randint(100, 1000)
     attempts = 15  # Number of chances
 
-    print("Welcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 100 and 1000.")
-    print(f"You have {attempts} chances to guess the number.")
+    st.write("Welcome to the Number Guessing Game!")
+    st.write("I'm thinking of a number between 100 and 1000.")
+    st.write(f"You have {attempts} chances to guess the number.")
 
     for attempt in range(attempts):
         try:
@@ -33,7 +34,7 @@ def guessing_game():
                             print("\n")
                         else:
                             break
-                    print(f"\nYou failed. Number is {num}" if attempts>=15 else f"\nYou got it!! Guess was {num}")
+                    st.write(f"\nYou failed. Number is {num}" if attempts>=15 else f"\nYou got it!! Guess was {num}")
 
 
 
